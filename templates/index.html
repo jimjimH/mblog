@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block headmessage %}
+    <h3>List of the posts</h3>
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+    <p style='font-size:15pt;font-weight:bold'>
+        <a href="post/{{post.slug}}">{{ post.title }}</a>
+    </p>
+    {% endfor %}
+{% endblock %}
+
